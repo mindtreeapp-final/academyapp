@@ -1,10 +1,393 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello World</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-  </body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mindtree Nursing Solutions offers comprehensive nursing courses like IQN, Prometric, NCLEX-RN, OET, and OSCE for your global career.">
+    <meta name="keywords" content="nursing courses, IQN, Prometric, NCLEX-RN, OET, OSCE, Mindtree Nursing Solutions">
+    <title>Mindtree Nursing Solutions</title>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mindtree Nursing Solutions">
+    <meta property="og:description" content="Mindtree Nursing Solutions offers comprehensive nursing courses like IQN, Prometric, NCLEX-RN, OET, and OSCE for your global career.">
+    <meta property="og:image" content="/images/logo.png">
+    <meta property="og:url" content="https://academyapp-mu.vercel.app/">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/images/otherimages/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="logo">
+                <img src="/images/logo.png" alt="Mindtree Nursing Solutions Logo">
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Courses</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/iqn.html">IQN</a></li>
+                            <li><a href="/oet.html">OET</a></li>
+                            <li><a href="/osce.html">OSCE</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#documentation">Documentation</a></li>
+                            <li><a href="#app">App</a></li>
+                            <li><a href="#live-classes">Live Classes</a></li>
+                            <li><a href="#visa-processing">Visa Processing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about-us.html">Company</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.mindtree.learning">APP</a></li>
+                    <li>
+                        <a href="tel:+918075301169" class="phone-icon" aria-label="Call us">
+                            <img src="/images/alternate-phone.svg" alt="Phone icon">
+                        </a>
+                    </li>
+                    <li><a href="https://academy.mindtreenursing.com/" class="enquiry-btn">Academy</a></li>
+                </ul>
+            </nav>
+        </header>
 
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <h1>MINDTREE NURSING SOLUTIONS</h1>
+                <h3 class="location-highlight">New Zealand IQN and OSCE Made Simple</h3>
+                <p class="subtitle">We provide you the best NZ IQN and OSCE Training: Online and In-Person with State-of-the-Art Simulation Lab.</p>
+                <div class="rating">
+                    <p>Excellent ⭐⭐⭐⭐⭐ 4000+ Success Stories</p>
+                </div>
+            </section>
+
+            <!-- Courses Section -->
+            <section id="courses" class="courses">
+                <h2 class="visually-hidden">Courses</h2>
+                <div class="video-container">
+                    <video controls poster="images/JUST-FRNT.jpg">
+                        <source src="videos/homeINTROvideo.mov" type="video/mp4">
+                        <p>Your browser does not support the video tag. Please <a href="videos/homeINTROvideo.mov" download>download the video</a> to watch it.</p>
+                    </video>
+                </div>
+                <div class="buttons"> 
+                    <div class="course-buttons">
+                        <a href="/all-courses.html" class="btn view-all-courses-btn">EXPLORE MORE</a>
+                        <div class="sub-course-buttons">
+                            <a href="/iqn.html" class="btn sub-course-btn">IQN</a>
+                            <a href="/osce.html" class="btn sub-course-btn">OSCE</a>
+                            <a href="/oet.html" class="btn sub-course-btn">OET</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="services">
+                <h2><strong>Become a Registered Nurse in New Zealand or Australia with Mindtree</strong></h2>
+                <p class="subtitle">We'll guide you every step of the way from Documentation to Registration</p>
+                <h3>Our Services</h3>
+                <div class="service-grid">
+                    <article class="service-box" id="documentation">
+                        <h3>Documentation</h3>
+                        <p>Comprehensive support for all your nursing documentation needs.</p>
+                    </article>
+                    <article class="service-box" id="communication-class">
+                        <h3>Communication Class</h3>
+                        <p>Enhance your communication skills with our specialized classes.</p>
+                    </article>
+                    <article class="service-box" id="app">
+                        <h3>App</h3>
+                        <p>Access our mobile app for on-the-go learning and support.</p>
+                    </article>
+                    <article class="service-box" id="live-classes">
+                        <h3>Live Classes</h3>
+                        <p>Join our interactive live sessions for real-time learning.</p>
+                    </article>
+                    <article class="service-box" id="visa-processing">
+                        <h3>Visa Processing</h3>
+                        <p>Expert assistance with visa applications and processing.</p>
+                    </article>
+                    <article class="service-box" id="prometric">
+                        <h3>Prometric</h3>
+                        <p>Preparation and support for the Prometric exam.</p>
+                    </article>
+                    <article class="service-box" id="nclexrn">
+                        <h3>NCLEX-RN</h3>
+                        <p>Comprehensive training for the NCLEX-RN certification.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Enquiry Popup -->
+            <div id="enquiryPopup" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn" onclick="closePopup('enquiryPopup')">×</span>
+                    <h2>Enquiry Form</h2>
+                    <form id="enquiryForm" action="/api/submit-enquiry" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g., 1234567890">
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course</label>
+                            <select id="course" name="course" required>
+                                <option value="">Select a Course</option>
+                                <option value="iqn">IQN</option>
+                                <option value="prometric">Prometric</option>
+                                <option value="nclex-rn">NCLEX-RN</option>
+                                <option value="oet">OET</option>
+                                <option value="osce">OSCE</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn submit-btn">Submit</button>
+                    </form>
+                    <p id="enquiryMessage" style="color: green; display: none;">Submission successful!</p>
+                </div>
+            </div>
+
+            <div id="downloadPopup" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn" onclick="closePopup('downloadPopup')">×</span>
+                    <h2>Download Brochure</h2>
+                    <form id="downloadForm" action="/api/submit-download" method="POST">
+                        <div class="form-group">
+                            <label for="download-name">Name</label>
+                            <input type="text" id="download-name" name="download-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="download-email">Email</label>
+                            <input type="email" id="download-email" name="download-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="download-phone">Phone Number</label>
+                            <input type="tel" id="download-phone" name="download-phone" pattern="[0-9]{10}" placeholder="e.g., 1234567890">
+                        </div>
+                        <button type="submit" class="btn download-btn">Download</button>
+                    </form>
+                    <p id="downloadMessage" style="color: green; display: none;">Submission successful! Downloading...</p>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <section class="reviews">
+                <h2>What Our Nurses Say</h2>
+                <p class="subtitle">Hear from nurses who achieved their dreams with Mindtree Nursing Solutions.</p>
+                <div class="carousel-wrapper">
+                    <!-- Video Reviews -->
+                    <div class="video-reviews">
+                        <article class="review-video">
+                            <h3 class="visually-hidden">Video Review</h3>
+                            <iframe width="225" height="400" src="https://youtube.com/embed/cD7i3zEjy2w?feature=share" title="Review by Nurse A" style="border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </article>
+                        <article class="review-video">
+                            <h3 class="visually-hidden">Video Review</h3>
+                            <iframe width="225" height="400" src="https://youtube.com/embed/4F1Hwq7SE1c?feature=share" title="Review by Nurse B" style="border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </article>
+                        <article class="review-video">
+                            <h3 class="visually-hidden">Video Review</h3>
+                            <iframe width="225" height="400" src="https://youtube.com/embed/RsfGr5Birvk?feature=share" title="Review by Nurse C" style="border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </article>
+                    </div>
+                    <!-- Text Reviews -->
+                    <div class="text-reviews">
+                        <div class="review-carousel">
+                            <article class="review-card">
+                                <div class="reviewer-initials">SG</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">Mind Tree Nursing Solutions has provided invaluable support to my family. They assisted my brother, a nurse, in successfully migrating to New Zealand. Their guidance throughout the entire process was exceptional; they were professional, thorough, and always available to answer our questions. Thanks to their expertise, my brother is now thriving in his career abroad. I can't thank them enough for their dedication and support. I highly recommend their services!</p>
+                                <p class="reviewer-name">Siju Gopinath</p>
+                            </article>
+                            <article class="review-card">
+                                <div class="reviewer-initials">NE</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">I processed my New Zealand application through Mindtree, and despite facing several challenges along the way, the team at Mindtree was incredibly supportive at every step. Their professionalism and dedication made the entire process much smoother. Mindtree is a trustworthy agency, and I would highly recommend them for Nurses who is planning to migrate to New Zealand. You can trust them 100% throughout the process. Thank you again to the all team.</p>
+                                <p class="reviewer-name">Nimmy Emil</p>
+                            </article>
+                            <article class="review-card">
+                                <div class="reviewer-initials">AP</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">I had an excellent experience with Mind tree! From the moment I reached out, the team was incredibly supportive and attentive. The application process was smooth, transparent and efficient. What truly stood out was their genuine care for their candidates and follow-up frequency. I strongly recommend Mind Tree for New Zealand processing. Thank you so much for the entire Mind tree team for the great support.</p>
+                                <p class="reviewer-name">Anakha Prakasan</p>
+                            </article>
+                            <article class="review-card">
+                                <div class="reviewer-initials">RR</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">Thank you entire Mindtree family for the huge support throughout my newzeland processing. You guys are awesome. Thank God I was able to pass my osce in 1st attempt only because of your support. I will surely recommend mindtree for everyone those who want to migrate to Newzeland.</p>
+                                <p class="reviewer-name">Remya Rajesh</p>
+                            </article>
+                            <article class="review-card">
+                                <div class="reviewer-initials">AJ</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">By the Grace of God I passed my New Zealand OSCE examination. I would like to express my sincere gratitude towards Mindtree for achieving this. The classes were well organized, excellent and providing clear explanations and personalized feedback. The instructors also were supportive and knowledgeable. I strongly recommend Mindtree for those who appear OSCE examination, because their throughout guidance and support will always help to achieve your goal. Moreover, Mindtree New Zealand processing is fast and rapid, I sincerely thank to all members of Mindtree family to complete my entire process.</p>
+                                <p class="reviewer-name">Aryamol Joseph</p>
+                            </article>
+                            <article class="review-card">
+                                <div class="reviewer-initials">AA</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">I was so happy when I could pass my OSCE exam in the first try itself. I want to thank everyone at mindtree for their huge support and motivation towards guiding me to this win. They surely have the best classes and trainings and their e-learning portal really helped me for practise lessons. Thank you mindtree family once again.</p>
+                                <p class="reviewer-name">Anandhu Anilkumar</p>
+                            </article>
+                            <article class="review-card">
+                                <div class="reviewer-initials">KV</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">“I would like to extend my heartfelt appreciation to the entire team at Mindtree Nursing Solutions for their unwavering dedication and commitment. The professionalism and compassion make a real difference in the lives of others. Thank you to the whole mindtree family for your hard work, kindness, and dedication.” The most trustworthy and genuine agency.</p>
+                                <p class="reviewer-name">Kunju Vava</p>
+                            </article>
+                            <article class="review-card">
+                                <div class="reviewer-initials">NB</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">Myself Nibi I had a wonderful experience with Mindtree team 😍for my CAP admission and NZ visa processing. I really appreciate Jijo chettan and all team members🤩 for their dedication and teamwork.I really recommend Mindtree to all candidates who wish to make their NZ dream come true. Also I would like to express my gratitude towards Gokula mam and Pathvista team for making my visa process smooth and fast. Thank you so much 😊</p>
+                                <p class="reviewer-name">Nibi Baby</p>
+                            </article>
+                            <article class="review-card">
+                                <div class="reviewer-initials">NT</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">Hai all, By god's grace, I attained NZ nursing registration after the successful completion of my NZ OSCE.I would like to express my sincere gratitude towards Mindtree Team for the greatest support and guidance through out the process I have received , especially for the OSCE training.I strongly recommend the Mindtree for those who are planning to migrate to NZ. Thank you</p>
+                                <p class="reviewer-name">Niminu Thomas</p>
+                            </article>
+                            <!-- Duplicate reviews for seamless looping -->
+                            <article class="review-card">
+                                <div class="reviewer-initials">SG</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">Mind Tree Nursing Solutions has provided invaluable support to my family. They assisted my brother, a nurse, in successfully migrating to New Zealand. Their guidance throughout the entire process was exceptional; they were professional, thorough, and always available to answer our questions. Thanks to their expertise, my brother is now thriving in his career abroad. I can't thank them enough for their dedication and support. I highly recommend their services!</p>
+                                <p class="reviewer-name">Siju Gopinath</p>
+                            </article>
+                            <article class="review-card">
+                                <div class="reviewer-initials">NE</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">I processed my New Zealand application through Mindtree, and despite facing several challenges along the way, the team at Mindtree was incredibly supportive at every step. Their professionalism and dedication made the entire process much smoother. Mindtree is a trustworthy agency, and I would highly recommend them for Nurses who is planning to migrate to New Zealand. You can trust them 100% throughout the process. Thank you again to the all team.</p>
+                                <p class="reviewer-name">Nimmy Emil</p>
+                            </article>
+                            <article class="review-card">
+                                <div class="reviewer-initials">AP</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">I had an excellent experience with Mind tree! From the moment I reached out, the team was incredibly supportive and attentive. The application process was smooth, transparent and efficient. What truly stood out was their genuine care for their candidates and follow-up frequency. I strongly recommend Mind Tree for New Zealand processing. Thank you so much for the entire Mind tree team for the great support.</p>
+                                <p class="reviewer-name">Anakha Prakasan</p>
+                            </article>
+                            <article class="review-card">
+                                <div class="reviewer-initials">RR</div>
+                                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">Thank you entire Mindtree family for the huge support throughout my newzeland processing. You guys are awesome. Thank God I was able to pass my osce in 1st attempt only because of your support. I will surely recommend mindtree for everyone those who want to migrate to Newzeland.</p>
+                                <p class="reviewer-name">Remya Rajesh</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section class="achievements">
+                <h2>Our Achievements</h2>
+                <ul class="achievement-grid">
+                    <li><p><span>10,000<span class="plus-sign">+</span></span> Nurses Trained</p></li>
+                    <li><p><span>95%</span> Pass Rate</p></li>
+                    <li><p><span>50<span class="plus-sign">+</span></span> Countries Served</p></li>
+                    <li><p><span>5</span> Years of Excellence</p></li>
+                </ul>
+            </section>
+
+            <!-- Locations Section -->
+            <section class="locations">
+                <h2>Our Locations</h2>
+                <div class="location-grid">
+                    <article class="location-box">
+                        <h3>Kollam, Kerala, India</h3>
+                        <address class="location-address">Olivet, M.C. Road, Panavely Kottarakkara, Kollam, Kerala 691532</address>
+                        <a href="mailto:info@mindtreenursing.com"><img src="/images/otherimages/gmail.svg" alt="Email icon"></a>
+                        <a href="tel:+918075301169"><img src="/images/alternate-phone.svg" alt="Phone icon"></a>
+                        <a href="tel:+917306724695"><img src="/images/alternate-phone.svg" alt="Phone icon"></a>
+                        <a href="https://maps.google.com/?q=Olivet,+M.C.+Road,+Panavely+Kottarakkara,+Kollam,+Kerala+691532" target="_blank" class="map-btn">View on Map</a>
+                    </article>
+                    <article class="location-box">
+                        <h3>Auckland, New Zealand</h3>
+                        <address class="location-address">30/167 Whitney Street, Blockhouse Bay, Auckland, 0600</address>
+                        <a href="mailto:info@mindtreenursing.com"><img src="/images/otherimages/gmail.svg" alt="Email icon"></a>
+                        <a href="tel:+64212178770"><img src="/images/alternate-phone.svg" alt="Phone icon"></a>
+                        <a href="https://maps.google.com/?q=30/167+Whitney+Street,+Blockhouse+Bay,+Auckland,+0600" target="_blank" class="map-btn">View on Map</a>
+                    </article>
+                    <article class="location-box">
+                        <h3>Christchurch, New Zealand</h3>
+                        <address class="location-address">110 Sir John McKenzie Avenue, Christchurch, New Zealand</address>
+                        <a href="mailto:info@mindtreenursing.com"><img src="/images/otherimages/gmail.svg" alt="Email icon"></a>
+                        <a href="tel:+64221230023"><img src="/images/alternate-phone.svg" alt="Phone icon"></a>
+                        <a href="https://maps.google.com/?q=110+Sir+John+McKenzie+Avenue,+Christchurch,+New+Zealand" target="_blank" class="map-btn">View on Map</a>
+                    </article>
+                    <article class="location-box">
+                        <h3>Canberra, ACT Australia</h3>
+                        <address class="location-address">22/2 Antis Street Canberra, ACT Australia</address>
+                        <a href="mailto:info@mindtreenursing.com"><img src="/images/otherimages/gmail.svg" alt="Email icon"></a>
+                        <a href="tel:+61493669557"><img src="/images/alternate-phone.svg" alt="Phone icon"></a>
+                        <a href="https://maps.google.com/?q=22/2+Antis+Street+Canberra,+ACT+Australia" target="_blank" class="map-btn">View on Map</a>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MINDTREE NURSING SOLUTIONS</h3>
+                    <p>From documentation to registration, all in one place.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Social Media</h3>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/MindtreeNursingSolutions?mibextid=ZbWKwL" target="_blank"><img src="/images/otherimages/fbicon.svg" alt="Facebook icon"></a></li>
+                        <li><a href="https://www.instagram.com/mindtreenursingsolutions/?hl=en" target="_blank"><img src="/images/otherimages/instaicon.svg" alt="Instagram icon"></a></li>
+                        <li><a href="https://www.youtube.com/@mindtreenursingsolutions5958" target="_blank"><img src="/images/otherimages/yticon.svg" alt="YouTube icon"></a></li>
+                        <li><a href="https://www.linkedin.com/@mindtreenursingsolutions" target="_blank"><img src="/images/linked-in.svg" alt="LinkedIn icon"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For Enquiries</h3>
+                    <ul>
+                        <li><a href="mailto:info@mindtreenursing.com"><img src="/images/otherimages/gmail.svg" alt="Email icon"> info@mindtreenursing.com</a></li>
+                        <li><a href="tel:+6421278770"><img src="/images/alternate-phone.svg" alt="Phone icon"> +6421278770</a></li>
+                        <li><a href="tel:+918075301169"><img src="/images/alternate-phone.svg" alt="Phone icon"> +91 8075301169</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="/#home">Home</a></li>
+                            <li><a href="/#courses">Courses</a></li>
+                            <li><a href="/#services">Services</a></li>
+                            <li><a href="/about-us.html">Company</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Mindtree Nursing Solutions. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <a href="https://wa.me/918075301169" class="whatsapp-icon" target="_blank" aria-label="Chat with us on WhatsApp">
+            <img src="/images/whatsapp-icon.png" alt="WhatsApp icon">
+        </a>
+    </div>
+    <script src="/script.js"></script>
