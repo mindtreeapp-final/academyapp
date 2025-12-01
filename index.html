@@ -7,7 +7,7 @@
     <meta name="keywords" content="nursing courses, IQN, Prometric, NCLEX-RN, OET, OSCE, Mindtree Nursing Solutions">
     <title>Mindtree Nursing Solutions</title>
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Mindtree Nursing Solutions">
+    <meta property="og:title" content="Mindtree Academy">
     <meta property="og:description" content="Mindtree Nursing Solutions offers comprehensive nursing courses like IQN, Prometric, NCLEX-RN, OET, and OSCE for your global career.">
     <meta property="og:image" content="/images/logo.png">
     <meta property="og:url" content="https://mindtreeacademy-app.vercel.app/">
@@ -16,7 +16,7 @@
     <link rel="icon" type="image/x-icon" href="/images/otherimages/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/logo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
-</head>
+</head>  
 <body>
     <div class="page-wrapper">
         <header>
@@ -49,7 +49,14 @@
                         </ul>
                     </li>
                     <li><a href="/about-us.html">About-Us</a></li>
-                    <li><a href="https://play.google.com/store/apps/details?id=com.mindtree.learning">APP</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">App</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://play.google.com/store/apps/details?id=com.mindtree.learning&pcampaignid=web_share" target="_blank">Android App</a></li>
+                            <li><a href="https://apps.apple.com/in/app/mindtree-academy/id6753161418" target="_blank">IOS App</a></li>
+                        </ul>
+                    </li>
+
                     <li>
                         <a href="tel:+918075301169" class="phone-icon" aria-label="Call us">
                             <img src="/images/alternate-phone.svg" alt="Phone icon">
@@ -63,7 +70,7 @@
         <main>
             <!-- Hero Section -->
             <section id="home" class="hero">
-                <h1>MINDTREE NURSING SOLUTIONS</h1>
+                <h1>MINDTREE ACADEMY</h1>
                 <h3 class="location-highlight">New Zealand IQN and OSCE Made Simple</h3>
                 <p class="subtitle">We provide you the best NZ IQN and OSCE Training: Online and In-Person with State-of-the-Art Simulation Lab.</p>
                 <div class="rating">
@@ -128,68 +135,6 @@
                     </article>
                 </div>
             </section>
-
-            <!-- Enquiry Popup -->
-            <div id="enquiryPopup" class="popup">
-                <div class="popup-content">
-                    <span class="close-btn" onclick="closePopup('enquiryPopup')">×</span>
-                    <h2>Enquiry Form</h2>
-                    <form id="enquiryForm" action="/api/submit-enquiry" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g., 1234567890">
-                        </div>
-                        <div class="form-group">
-                            <label for="course">Course</label>
-                            <select id="course" name="course" required>
-                                <option value="">Select a Course</option>
-                                <option value="iqn">IQN</option>
-                                <option value="prometric">Prometric</option>
-                                <option value="nclex-rn">NCLEX-RN</option>
-                                <option value="oet">OET</option>
-                                <option value="osce">OSCE</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn submit-btn">Submit</button>
-                    </form>
-                    <p id="enquiryMessage" style="color: green; display: none;">Submission successful!</p>
-                </div>
-            </div>
-
-            <div id="downloadPopup" class="popup">
-                <div class="popup-content">
-                    <span class="close-btn" onclick="closePopup('downloadPopup')">×</span>
-                    <h2>Download Brochure</h2>
-                    <form id="downloadForm" action="/api/submit-download" method="POST">
-                        <div class="form-group">
-                            <label for="download-name">Name</label>
-                            <input type="text" id="download-name" name="download-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="download-email">Email</label>
-                            <input type="email" id="download-email" name="download-email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="download-phone">Phone Number</label>
-                            <input type="tel" id="download-phone" name="download-phone" pattern="[0-9]{10}" placeholder="e.g., 1234567890">
-                        </div>
-                        <button type="submit" class="btn download-btn">Download</button>
-                    </form>
-                    <p id="downloadMessage" style="color: green; display: none;">Submission successful! Downloading...</p>
-                </div>
-            </div>
 
             <!-- Reviews Section -->
             <section class="reviews">
