@@ -318,18 +318,32 @@ nav ul li .phone-icon:hover {
     z-index: 1;
 }
 
+#courses .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
 /* Specific Video Container for Courses Section */
 #courses .video-container {
-    max-width: 1200px;
-    margin: 0 auto 0.5rem;
     position: relative;
+    width: 54%;
+    max-width: 1200px;
+    margin: 0 auto 1rem;
+    padding-top: 30.25%; /* 16:9 aspect ratio */
+    background: rgba(48, 103, 255, 0.1);
     box-shadow: 0 0 60px rgba(0, 70, 255, 0.8);
     border-radius: 10px;
-    background: rgba(48, 103, 255, 0.1);
-    height: 600px;
     overflow: hidden;
-    padding: 0.2rem;
 }
+
+
 
 #courses .video-container video {
     width: 100%;
