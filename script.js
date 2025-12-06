@@ -114,3 +114,45 @@ window.addEventListener('resize', () => {
     }
 });
 
+
+
+// ---------- Popup Logic ----------
+window.onload = function () {
+    const popup = document.getElementById("customPopup");
+    const visitBtn = document.getElementById("visitBtn");
+    const closePopup = document.getElementById("closePopup");
+
+    // Show popup immediately
+    popup.style.display = "flex";
+
+    // Go to external link
+    visitBtn.onclick = () => {
+        window.location.href = "https://apps.mindtreenursing.com/";
+    };
+
+    // Stay on homepage
+    closePopup.onclick = () => {
+        popup.style.display = "none";
+    };
+};
+
+// ---------- Snow Effect for 2 Minutes ----------
+function createSnowflake() {
+    const snow = document.createElement("div");
+    snow.classList.add("snowflake");
+    snow.style.left = Math.random() * window.innerWidth + "px";
+    snow.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    snow.style.opacity = Math.random();
+    document.getElementById("snow").appendChild(snow);
+
+    setTimeout(() => {
+        snow.remove();
+    }, 5000);
+}
+
+// Create snow for 120 seconds
+let snowInterval = setInterval(createSnowflake, 100);
+
+setTimeout(() => {
+    clearInterval(snowInterval);
+}, 120000);
