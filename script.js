@@ -116,43 +116,57 @@ window.addEventListener('resize', () => {
 
 
 
-// ---------- Popup Logic ----------
-window.onload = function () {
-    const popup = document.getElementById("customPopup");
-    const visitBtn = document.getElementById("visitBtn");
-    const closePopup = document.getElementById("closePopup");
 
-    // Show popup immediately
-    popup.style.display = "flex";
+// ===== Popup Logic =====
+function closePopup() {
+  document.getElementById("christmasPopup").style.display = "none";
 
-    // Go to external link
-    visitBtn.onclick = () => {
-        window.location.href = "https://apps.mindtreenursing.com/";
-    };
-
-    // Stay on homepage
-    closePopup.onclick = () => {
-        popup.style.display = "none";
-    };
-};
-
-// ---------- Snow Effect for 2 Minutes ----------
-function createSnowflake() {
-    const snow = document.createElement("div");
-    snow.classList.add("snowflake");
-    snow.style.left = Math.random() * window.innerWidth + "px";
-    snow.style.animationDuration = (Math.random() * 3 + 2) + "s";
-    snow.style.opacity = Math.random();
-    document.getElementById("snow").appendChild(snow);
-
-    setTimeout(() => {
-        snow.remove();
-    }, 5000);
+  // Hide Santa when popup closes
+  const santa = document.getElementById("santaGif");
+  if (santa) {
+    santa.style.display = "none";
+  }
 }
 
-// Create snow for 120 seconds
-let snowInterval = setInterval(createSnowflake, 100);
+window.onload = function () {
+  // Show popup
+  document.getElementById("christmasPopup").style.display = "flex";
 
+  // Show Santa
+  const santa = document.getElementById("santaGif");
+  if (santa) {
+    santa.style.display = "block";
+  }
+};
+
+
+// ===== Snowfall Logic =====
+let snowActive = true;
+
+function createSnowflake() {
+  if (!snowActive) return;
+
+  const snowflake = document.createElement("div");
+  snowflake.className = "snowflake";
+  snowflake.innerHTML = "❄";
+
+  snowflake.style.left = Math.random() * window.innerWidth + "px";
+  snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+  snowflake.style.opacity = Math.random();
+  snowflake.style.animationDuration = Math.random() * 3 + 3 + "s";
+
+  document.body.appendChild(snowflake);
+
+  setTimeout(() => {
+    snowflake.remove();
+  }, 6000);
+}
+
+// Start snowfall
+const snowInterval = setInterval(createSnowflake, 150);
+
+// Stop snowfall after 3 minutes
 setTimeout(() => {
-    clearInterval(snowInterval);
-}, 120000);
+  snowActive = false;
+  clearInterval(snowInterval);
+}, 400000);
