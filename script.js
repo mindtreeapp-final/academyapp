@@ -170,3 +170,4 @@ setTimeout(() => {
   snowActive = false;
   clearInterval(snowInterval);
 }, 400000);
+ 
