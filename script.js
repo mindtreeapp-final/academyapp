@@ -121,53 +121,12 @@ window.addEventListener('resize', () => {
 function closePopup() {
   document.getElementById("christmasPopup").style.display = "none";
 
-  // Hide Santa when popup closes
-  const santa = document.getElementById("santaGif");
-  if (santa) {
-    santa.style.display = "none";
-  }
 }
 
 window.onload = function () {
   // Show popup
   document.getElementById("christmasPopup").style.display = "flex";
 
-  // Show Santa
-  const santa = document.getElementById("santaGif");
-  if (santa) {
-    santa.style.display = "block";
-  }
 };
 
 
-// ===== Snowfall Logic =====
-let snowActive = true;
-
-function createSnowflake() {
-  if (!snowActive) return;
-
-  const snowflake = document.createElement("div");
-  snowflake.className = "snowflake";
-  snowflake.innerHTML = "❄";
-
-  snowflake.style.left = Math.random() * window.innerWidth + "px";
-  snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
-  snowflake.style.opacity = Math.random();
-  snowflake.style.animationDuration = Math.random() * 3 + 3 + "s";
-
-  document.body.appendChild(snowflake);
-
-  setTimeout(() => {
-    snowflake.remove();
-  }, 6000);
-}
-
-// Start snowfall
-const snowInterval = setInterval(createSnowflake, 150);
-
-// Stop snowfall after 3 minutes
-setTimeout(() => {
-  snowActive = false;
-  clearInterval(snowInterval);
-}, 400000);
- 
