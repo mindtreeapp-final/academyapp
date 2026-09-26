@@ -1,4 +1,99 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help &amp; Support | MindTree Academy</title>
+<meta name="description" content="Get help with the MindTree Academy app — contact details and answers to common questions.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0f7a5c">
+<style>
+:root{
+  --bg:#f5f8f7;--surface:#ffffff;--text:#1d2a27;--muted:#5b6b67;--border:#dde6e3;
+  --brand:#0f7a5c;--brand-strong:#0a5c45;--brand-soft:#e6f4ef;--mark:#fff3c4;--mark-text:#6b4e00;
+  --radius:14px;--shadow:0 1px 2px rgba(16,40,34,.05),0 8px 24px rgba(16,40,34,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0f1614;--surface:#16201d;--text:#e4ece9;--muted:#9aaca7;--border:#26332f;
+    --brand:#4cc49b;--brand-strong:#7ad8b7;--brand-soft:#1b2f28;--mark:#3d3310;--mark-text:#ffe08a;
+    --shadow:none;}
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:16px;line-height:1.65}
+a{color:var(--brand);text-decoration-thickness:1px;text-underline-offset:2px}
+a:hover{color:var(--brand-strong)}
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--surface) 92%,transparent);
+  backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--border)}
+.header-inner{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--text);text-decoration:none}
+.brand-mark{width:34px;height:34px;border-radius:10px;background:var(--brand);display:grid;place-items:center}
+.brand-mark svg{width:20px;height:20px}
+.brand small{display:block;font-weight:500;font-size:12px;color:var(--muted);line-height:1.2}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{padding:7px 12px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:14px;font-weight:500}
+.nav a:hover{background:var(--brand-soft);color:var(--brand-strong)}
+.nav a[aria-current="page"]{background:var(--brand);color:#fff}
+.hero{max-width:1080px;margin:0 auto;padding:40px 20px 8px}
+.hero .eyebrow{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)}
+.hero h1{margin:6px 0 8px;font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.01em}
+.hero .meta{color:var(--muted);font-size:14px;margin:0}
+.layout{max-width:1080px;margin:0 auto;padding:24px 20px 56px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;align-items:start}
+.layout.no-toc{grid-template-columns:minmax(0,1fr);max-width:840px}
+.toc{position:sticky;top:84px;font-size:14px;max-height:calc(100vh - 100px);overflow:auto}
+.toc h2{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 10px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border)}
+.toc li a{display:block;padding:5px 12px;margin-left:-2px;border-left:2px solid transparent;color:var(--muted);text-decoration:none;line-height:1.4}
+.toc li a:hover{color:var(--brand);border-left-color:var(--brand)}
+.content{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(20px,4vw,44px);min-width:0}
+.content>:first-child{margin-top:0}
+.content .lead{font-size:17px;color:var(--text)}
+.content h2{font-size:22px;line-height:1.3;margin:40px 0 12px;padding-top:24px;border-top:1px solid var(--border)}
+.content h2:first-of-type{border-top:0;padding-top:0}
+.content h3{font-size:17px;margin:26px 0 8px}
+.content p{margin:0 0 14px}
+.content ul,.content ol{margin:0 0 16px;padding-left:22px}
+.content li{margin:6px 0}
+.content li::marker{color:var(--brand)}
+.content strong{font-weight:650}
+.table-wrap{overflow-x:auto;margin:8px 0 18px;border:1px solid var(--border);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--brand-soft);color:var(--brand-strong);font-weight:600}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600}
+.path{display:inline-block;background:var(--brand-soft);color:var(--brand-strong);font-weight:600;padding:8px 14px;border-radius:8px;font-size:15px}
+mark.todo{background:var(--mark);color:var(--mark-text);padding:2px 6px;border-radius:4px;font-weight:600}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:4px 0 18px}
+.contact-card{display:flex;flex-direction:column;gap:2px;padding:18px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);background:var(--bg);transition:border-color .15s,transform .15s}
+.contact-card:hover{border-color:var(--brand);transform:translateY(-1px);color:var(--text)}
+.contact-card .label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--brand);font-weight:600}
+.contact-card .value{font-size:17px;font-weight:650;word-break:break-word}
+.contact-card .hint{font-size:13.5px;color:var(--muted)}
+.faq h3{margin:0;font-size:16.5px}
+.site-footer{border-top:1px solid var(--border);background:var(--surface)}
+.footer-inner{max-width:1080px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.footer-inner nav{display:flex;gap:16px;flex-wrap:wrap}
+.footer-inner a{color:var(--muted);text-decoration:none}
+.footer-inner a:hover{color:var(--brand)}
+@media (max-width:860px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .toc{position:static;max-height:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px}
+}
+@media (max-width:520px){
+  .header-inner{padding:10px 16px}.hero{padding:28px 16px 4px}.layout{padding:16px 16px 40px}
+  .nav a{padding:6px 10px;font-size:13px}
+}
+@media print{
+  .site-header,.toc,.site-footer{display:none}
+  body{background:#fff;color:#000}.layout{display:block;padding:0}
+  .content{border:0;box-shadow:none;padding:0}
+}
+</style>
+</head>
+<body>
 <!--
   NOTE FOR WHOEVER MAINTAINS THIS PAGE
   The iPhone app links here from its Settings screen, which makes this page part of what Apple reviews.
@@ -7,84 +102,22 @@
   a Buy button in the app would. Keep the answer to "How do I get access to a course?" exactly as
   neutral as it is.
 -->
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get help with the Mindtree Academy app: contact details and answers to common questions.">
-    <title>Help &amp; Support | Mindtree Academy</title>
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Help & Support | Mindtree Academy">
-    <meta property="og:description" content="Get help with the Mindtree Academy app: contact details and answers to common questions.">
-    <meta property="og:image" content="images/otherimages/Untitled design (1).png">
-    <meta property="og:url" content="https://www.mindtreeacademy.com/support.html">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/legal.css">
-    <link rel="icon" type="image/x-icon" href="/images/otherimages/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/otherimages/Untitled design (1).png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
-</head>
-<body>
-
-    <div class="page-wrapper">
-        <header>
-            <div class="logo">
-                <a href="/"><img src="images/otherimages/Untitled design (1).png" alt="Mindtree Academy"></a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="/#home">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">Courses</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/oet.html">OET</a></li>
-                            <li><a href="/iqn.html">IQN</a></li>
-                            <li><a href="/osce.html">OSCE</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/#documentation">Documentation</a></li>
-                            <li><a href="/#app">App</a></li>
-                            <li><a href="/#live-classes">Live Classes</a></li>
-                            <li><a href="/#visa-processing">Visa Processing</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/about-us.html">About-Us</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">App</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://play.google.com/store/apps/details?id=com.mindtree.learning&amp;pcampaignid=web_share" target="_blank">Android App</a></li>
-                            <li><a href="https://apps.apple.com/in/app/mindtree-academy/id6753161418" target="_blank">IOS App</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="https://academy.mindtreenursing.com/" class="enquiry-btn">Academy</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <section class="legal-hero">
-                <span class="legal-eyebrow">Support</span>
-                <h1>Help &amp; Support</h1>
-                <p class="legal-updated">We reply within one working day</p>
-            </section>
-
-            <div class="legal-layout">
-                <aside class="legal-toc" aria-label="On this page">
-                    <h2>On this page</h2>
-                    <ol><li><a href="#get-in-touch">Get in touch</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li><li><a href="#also-see">Also see</a></li></ol>
-                </aside>
-
-                <article class="legal-content">
-<p class="legal-lead">MindTree Academy helps nursing students and nursing professionals prepare for their exams: structured
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="support.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-7"/><path d="M12 15c-4 0-7-2.7-7-6.5C5 5 8 2 12 2s7 3 7 6.5c0 3.8-3 6.5-7 6.5z"/><path d="M12 15l-3-3M12 12l3-2.5"/></svg></span><span>MindTree Academy<small>Olivet Management Private Limited</small></span></a>
+    <nav class="nav" aria-label="Main"><a href="support.html" aria-current="page">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow">Support</div>
+    <h1>Help &amp; Support</h1>
+    <p class="meta">We reply within one working day</p>
+  </section>
+  <div class="layout">
+    <aside class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#get-in-touch">Get in touch</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li><li><a href="#also-see">Also see</a></li></ol></aside>
+    <article class="content faq">
+<p class="lead">MindTree Academy helps nursing students and nursing professionals prepare for their exams: structured
 courses, video and document lessons, practice questions with explanations, timed mock tests, answers
 to your questions from real faculty, and certificates when you finish.</p>
 <h2 id="get-in-touch">Get in touch</h2>
@@ -96,14 +129,11 @@ to your questions from real faculty, and certificates when you finish.</p>
 <p>We reply within <strong>one working day</strong>. Telling us your registered email address, your phone model and
 what you were doing when it went wrong gets you a useful answer much faster.</p>
 <h2 id="frequently-asked-questions">Frequently asked questions</h2>
-<div class="faq-item">
 <h3 id="how-do-i-get-access-to-a-course">How do I get access to a course?</h3>
 <p>Some courses are <strong>free to join</strong>: open the course in the app and tap <strong>Enrol for free</strong>.</p>
 <p>For other courses, your institution or a MindTree administrator enrols you, and the course then
 appears under <strong>My Courses</strong> the next time you open the app. If you are not sure which applies to
 you, or a course you expected is missing, write to <a href="mailto:info@mindtreenursing.com">info@mindtreenursing.com</a> and we will sort it out.</p>
-</div>
-<div class="faq-item">
 <h3 id="i-did-not-receive-my-verification-code">I did not receive my verification code</h3>
 <p>Codes arrive within a minute or two. If yours has not:</p>
 <ol>
@@ -112,127 +142,59 @@ you, or a course you expected is missing, write to <a href="mailto:info@mindtree
 <li>Wait for the countdown on the screen to finish, then tap <strong>Resend</strong>.</li>
 <li>If it still does not arrive, write to <a href="mailto:databasemindtree@gmail.com">databasemindtree@gmail.com</a> from the address you are trying to use.</li>
 </ol>
-</div>
-<div class="faq-item">
 <h3 id="i-forgot-my-password">I forgot my password</h3>
 <p>On the sign-in screen tap <strong>Forgot password</strong>, enter your registered email address, and follow the
 code we send you. For your security we send the same confirmation message whether or not an account
 exists for that address.</p>
-</div>
-<div class="faq-item">
 <h3 id="a-video-will-not-play">A video will not play</h3>
 <p>Videos need a working internet connection and are not available offline. Try switching between
 mobile data and Wi-Fi, then close and reopen the app — the link a video plays from is short-lived and
 is refreshed each time you open the lesson. If it still fails, tell us the course, the lesson and
 your phone model.</p>
-</div>
-<div class="faq-item">
 <h3 id="a-pdf-or-note-will-not-open">A PDF or note will not open</h3>
 <p>PDFs open inside the app. If one does not, close and reopen the app, and check you have a little free
 storage — documents are downloaded before they are shown. Tell us which lesson if it persists.</p>
-</div>
-<div class="faq-item">
 <h3 id="why-can-i-not-screenshot-or-record-a-mock-test">Why can I not screenshot or record a mock test?</h3>
 <p>To keep exams fair, the app blocks screenshots and screen recording <strong>while a proctored mock test is
 open</strong>, so those screens appear blank in a recording. While the test is open the app also tells your
 faculty if a screenshot was attempted, if you left the app, or if your network dropped. None of these
 fails your attempt on its own — they are information for your faculty. Normal screenshots work again
 everywhere else, including as soon as the test ends.</p>
-</div>
-<div class="faq-item">
 <h3 id="my-progress-or-reading-time-looks-wrong">My progress or reading time looks wrong</h3>
 <p>Progress is saved on our servers, so it follows you between devices — but it needs a connection at
 the time. A lesson you finished while offline may take until your next online session to appear.
 Videos count towards completion by how much you actually watched, and documents by how far you
 scrolled and how long you spent. If a lesson that you have genuinely finished still shows as
 incomplete, use <strong>Mark as complete</strong> on the lesson.</p>
-</div>
-<div class="faq-item">
 <h3 id="my-certificate-has-not-appeared">My certificate has not appeared</h3>
 <p>A certificate becomes available once every required item in the course is complete — optional items
 do not count. Open the course and check its progress: anything still unticked is what is holding it
 up. If everything is ticked and the certificate is still missing, write to us with the course name.</p>
-</div>
-<div class="faq-item">
 <h3 id="it-says-i-am-signed-in-on-too-many-devices">It says I am signed in on too many devices</h3>
 <p>One account may be used on a limited number of devices. Go to <strong>Profile → Settings → Signed-in
 devices</strong>, and sign out the ones you no longer use. <strong>Sign out of every device</strong> signs out everywhere,
 including the phone you are holding.</p>
-</div>
-<div class="faq-item">
 <h3 id="how-do-i-delete-my-account">How do I delete my account?</h3>
 <p>In the app: <strong>Profile → Settings → Account → Delete my account</strong>. Deletion is immediate and
 permanent — your account, profile and learning history are erased, you are signed out everywhere, and
 the account cannot be recovered. Invoices are kept without your personal details, because tax law
 requires it.</p>
-</div>
-<div class="faq-item">
 <h3 id="is-my-data-private">Is my data private?</h3>
 <p>We use no analytics services, no crash-reporting services, no advertising and no cross-app tracking.
 The full detail is in our <a href="privacy.html">Privacy Policy</a>.</p>
-</div>
 <h2 id="also-see">Also see</h2>
 <ul>
 <li><a href="privacy.html">Privacy Policy</a></li>
 <li><a href="terms.html">Terms of Use</a></li>
 </ul>
-                </article>
-            </div>
-        </main>
-
-        <footer>
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>MINDTREE NURSING SOLUTIONS</h3>
-                    <p>From documentation to registration, all in one place.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Social Media</h3>
-                    <ul class="social-icons">
-                        <li><a href="https://www.facebook.com/MindtreeNursingSolutions?mibextid=ZbWKwL" target="_blank"><img src="/images/otherimages/fbicon.svg" alt="Facebook icon"></a></li>
-                        <li><a href="https://www.instagram.com/mindtreenursingsolutions/?hl=en" target="_blank"><img src="/images/otherimages/instaicon.svg" alt="Instagram icon"></a></li>
-                        <li><a href="https://www.youtube.com/@mindtreenursingsolutions5958" target="_blank"><img src="/images/otherimages/yticon.svg" alt="YouTube icon"></a></li>
-                        <li><a href="https://www.linkedin.com/@mindtreenursingsolutions" target="_blank"><img src="/images/linked-in.svg" alt="LinkedIn icon"></a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>For Enquiries</h3>
-                    <ul>
-                        <li><a href="mailto:info@mindtreenursing.com"><img src="/images/otherimages/gmail.svg" alt="Email icon"> info@mindtreenursing.com</a></li>
-                        <li><a href="tel:+64212178770"><img src="/images/alternate-phone.svg" alt="Phone icon"> +64212178770</a></li>
-                        <li><a href="tel:+919778286707"><img src="/images/alternate-phone.svg" alt="Phone icon"> +919778286707</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <nav>
-                        <ul>
-                            <li><a href="/#home">Home</a></li>
-                            <li><a href="/#courses">Courses</a></li>
-                            <li><a href="/#services">Services</a></li>
-                            <li><a href="/about-us.html">Company</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="copyright">
-                <ul class="legal-links">
-                    <li><a href="support.html">Help &amp; Support</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Use</a></li>
-                </ul>
-                <p>&copy; 2026 Mindtree Nursing Solutions. All rights reserved.</p>
-            </div>
-        </footer>
-
-        <a href="https://wa.me/+919778286707" class="whatsapp-icon" target="_blank" aria-label="Chat with us on WhatsApp">
-            <img src="/images/whatsapp-icon.png" alt="WhatsApp icon">
-        </a>
-
-        <!-- Empty placeholder: script.js opens #christmasPopup on load. It is hidden by css/legal.css
-             so no offer ever appears on these pages (required for App Store review). -->
-        <div id="christmasPopup" class="popup-overlay" aria-hidden="true"></div>
-    </div>
-    <script src="/script.js"></script>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>&copy; 2026 Olivet Management Private Limited. All rights reserved.</span>
+    <nav aria-label="Footer"><a href="support.html">Help &amp; Support</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></nav>
+  </div>
+</footer>
 </body>
 </html>
