@@ -1,82 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The terms that govern your use of the Mindtree Academy apps and website.">
-    <title>Terms of Use | Mindtree Academy</title>
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Terms of Use | Mindtree Academy">
-    <meta property="og:description" content="The terms that govern your use of the Mindtree Academy apps and website.">
-    <meta property="og:image" content="images/otherimages/Untitled design (1).png">
-    <meta property="og:url" content="https://www.mindtreeacademy.com/terms.html">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/legal.css">
-    <link rel="icon" type="image/x-icon" href="/images/otherimages/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/otherimages/Untitled design (1).png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Use | MindTree Academy</title>
+<meta name="description" content="The terms that govern your use of the MindTree Academy apps and website.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0f7a5c">
+<style>
+:root{
+  --bg:#f5f8f7;--surface:#ffffff;--text:#1d2a27;--muted:#5b6b67;--border:#dde6e3;
+  --brand:#0f7a5c;--brand-strong:#0a5c45;--brand-soft:#e6f4ef;--mark:#fff3c4;--mark-text:#6b4e00;
+  --radius:14px;--shadow:0 1px 2px rgba(16,40,34,.05),0 8px 24px rgba(16,40,34,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0f1614;--surface:#16201d;--text:#e4ece9;--muted:#9aaca7;--border:#26332f;
+    --brand:#4cc49b;--brand-strong:#7ad8b7;--brand-soft:#1b2f28;--mark:#3d3310;--mark-text:#ffe08a;
+    --shadow:none;}
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:16px;line-height:1.65}
+a{color:var(--brand);text-decoration-thickness:1px;text-underline-offset:2px}
+a:hover{color:var(--brand-strong)}
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--surface) 92%,transparent);
+  backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--border)}
+.header-inner{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--text);text-decoration:none}
+.brand-mark{width:34px;height:34px;border-radius:10px;background:var(--brand);display:grid;place-items:center}
+.brand-mark svg{width:20px;height:20px}
+.brand small{display:block;font-weight:500;font-size:12px;color:var(--muted);line-height:1.2}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{padding:7px 12px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:14px;font-weight:500}
+.nav a:hover{background:var(--brand-soft);color:var(--brand-strong)}
+.nav a[aria-current="page"]{background:var(--brand);color:#fff}
+.hero{max-width:1080px;margin:0 auto;padding:40px 20px 8px}
+.hero .eyebrow{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)}
+.hero h1{margin:6px 0 8px;font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.01em}
+.hero .meta{color:var(--muted);font-size:14px;margin:0}
+.layout{max-width:1080px;margin:0 auto;padding:24px 20px 56px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;align-items:start}
+.layout.no-toc{grid-template-columns:minmax(0,1fr);max-width:840px}
+.toc{position:sticky;top:84px;font-size:14px;max-height:calc(100vh - 100px);overflow:auto}
+.toc h2{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 10px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--border)}
+.toc li a{display:block;padding:5px 12px;margin-left:-2px;border-left:2px solid transparent;color:var(--muted);text-decoration:none;line-height:1.4}
+.toc li a:hover{color:var(--brand);border-left-color:var(--brand)}
+.content{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(20px,4vw,44px);min-width:0}
+.content>:first-child{margin-top:0}
+.content .lead{font-size:17px;color:var(--text)}
+.content h2{font-size:22px;line-height:1.3;margin:40px 0 12px;padding-top:24px;border-top:1px solid var(--border)}
+.content h2:first-of-type{border-top:0;padding-top:0}
+.content h3{font-size:17px;margin:26px 0 8px}
+.content p{margin:0 0 14px}
+.content ul,.content ol{margin:0 0 16px;padding-left:22px}
+.content li{margin:6px 0}
+.content li::marker{color:var(--brand)}
+.content strong{font-weight:650}
+.table-wrap{overflow-x:auto;margin:8px 0 18px;border:1px solid var(--border);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--brand-soft);color:var(--brand-strong);font-weight:600}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600}
+.path{display:inline-block;background:var(--brand-soft);color:var(--brand-strong);font-weight:600;padding:8px 14px;border-radius:8px;font-size:15px}
+mark.todo{background:var(--mark);color:var(--mark-text);padding:2px 6px;border-radius:4px;font-weight:600}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:4px 0 18px}
+.contact-card{display:flex;flex-direction:column;gap:2px;padding:18px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);background:var(--bg);transition:border-color .15s,transform .15s}
+.contact-card:hover{border-color:var(--brand);transform:translateY(-1px);color:var(--text)}
+.contact-card .label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--brand);font-weight:600}
+.contact-card .value{font-size:17px;font-weight:650;word-break:break-word}
+.contact-card .hint{font-size:13.5px;color:var(--muted)}
+.faq h3{margin:0;font-size:16.5px}
+.site-footer{border-top:1px solid var(--border);background:var(--surface)}
+.footer-inner{max-width:1080px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.footer-inner nav{display:flex;gap:16px;flex-wrap:wrap}
+.footer-inner a{color:var(--muted);text-decoration:none}
+.footer-inner a:hover{color:var(--brand)}
+@media (max-width:860px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .toc{position:static;max-height:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px}
+}
+@media (max-width:520px){
+  .header-inner{padding:10px 16px}.hero{padding:28px 16px 4px}.layout{padding:16px 16px 40px}
+  .nav a{padding:6px 10px;font-size:13px}
+}
+@media print{
+  .site-header,.toc,.site-footer{display:none}
+  body{background:#fff;color:#000}.layout{display:block;padding:0}
+  .content{border:0;box-shadow:none;padding:0}
+}
+</style>
 </head>
 <body>
-
-    <div class="page-wrapper">
-        <header>
-            <div class="logo">
-                <a href="/"><img src="images/otherimages/Untitled design (1).png" alt="Mindtree Academy"></a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="/#home">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">Courses</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/oet.html">OET</a></li>
-                            <li><a href="/iqn.html">IQN</a></li>
-                            <li><a href="/osce.html">OSCE</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/#documentation">Documentation</a></li>
-                            <li><a href="/#app">App</a></li>
-                            <li><a href="/#live-classes">Live Classes</a></li>
-                            <li><a href="/#visa-processing">Visa Processing</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/about-us.html">About-Us</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">App</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://play.google.com/store/apps/details?id=com.mindtree.learning&amp;pcampaignid=web_share" target="_blank">Android App</a></li>
-                            <li><a href="https://apps.apple.com/in/app/mindtree-academy/id6753161418" target="_blank">IOS App</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="https://academy.mindtreenursing.com/" class="enquiry-btn">Academy</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <section class="legal-hero">
-                <span class="legal-eyebrow">Legal</span>
-                <h1>Terms of Use</h1>
-                <p class="legal-updated">Last updated: 26 September 2026</p>
-            </section>
-
-            <div class="legal-layout">
-                <aside class="legal-toc" aria-label="On this page">
-                    <h2>On this page</h2>
-                    <ol><li><a href="#1-who-may-use-mindtree">1. Who may use MindTree</a></li><li><a href="#2-your-account">2. Your account</a></li><li><a href="#3-course-access">3. Course access</a></li><li><a href="#4-what-you-may-and-may-not-do">4. What you may and may not do</a></li><li><a href="#5-exams-and-academic-integrity">5. Exams and academic integrity</a></li><li><a href="#6-certificates">6. Certificates</a></li><li><a href="#7-not-medical-advice">7. Not medical advice</a></li><li><a href="#8-payments-and-refunds">8. Payments and refunds</a></li><li><a href="#9-availability">9. Availability</a></li><li><a href="#10-ending-your-access">10. Ending your access</a></li><li><a href="#11-liability">11. Liability</a></li><li><a href="#12-changes-to-these-terms">12. Changes to these terms</a></li><li><a href="#13-governing-law">13. Governing law</a></li><li><a href="#14-contact">14. Contact</a></li></ol>
-                </aside>
-
-                <article class="legal-content">
-<p class="legal-lead">These terms govern your use of the MindTree Academy apps and website, operated by <strong>Olivet Management Private Limited</strong>, 081/787, Olivet, Panavely, Kottarakkara, Kollam, Kerala 691532, India. By creating an account you accept them.</p>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="support.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-7"/><path d="M12 15c-4 0-7-2.7-7-6.5C5 5 8 2 12 2s7 3 7 6.5c0 3.8-3 6.5-7 6.5z"/><path d="M12 15l-3-3M12 12l3-2.5"/></svg></span><span>MindTree Academy<small>Olivet Management Private Limited</small></span></a>
+    <nav class="nav" aria-label="Main"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html" aria-current="page">Terms</a></nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow">Legal</div>
+    <h1>Terms of Use</h1>
+    <p class="meta">Last updated: 26 September 2026</p>
+  </section>
+  <div class="layout">
+    <aside class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#1-who-may-use-mindtree">1. Who may use MindTree</a></li><li><a href="#2-your-account">2. Your account</a></li><li><a href="#3-course-access">3. Course access</a></li><li><a href="#4-what-you-may-and-may-not-do">4. What you may and may not do</a></li><li><a href="#5-exams-and-academic-integrity">5. Exams and academic integrity</a></li><li><a href="#6-certificates">6. Certificates</a></li><li><a href="#7-not-medical-advice">7. Not medical advice</a></li><li><a href="#8-payments-and-refunds">8. Payments and refunds</a></li><li><a href="#9-availability">9. Availability</a></li><li><a href="#10-ending-your-access">10. Ending your access</a></li><li><a href="#11-liability">11. Liability</a></li><li><a href="#12-changes-to-these-terms">12. Changes to these terms</a></li><li><a href="#13-governing-law">13. Governing law</a></li><li><a href="#14-contact">14. Contact</a></li></ol></aside>
+    <article class="content">
+<p class="lead">These terms govern your use of the MindTree Academy apps and website, operated by <strong>Olivet Management Private Limited</strong>, 081/787, Olivet, Panavely, Kottarakkara, Kollam, Kerala 691532, India. By creating an account you accept them.</p>
 <h2 id="1-who-may-use-mindtree">1. Who may use MindTree</h2>
 <p>You must be at least <strong>21</strong> years old. MindTree is intended for nursing students and
 nursing professionals. You must give accurate registration details and keep your password to
@@ -140,63 +173,14 @@ you in the app or by email. Continuing to use MindTree after a change means you 
 jurisdiction.</p>
 <h2 id="14-contact">14. Contact</h2>
 <p><a href="mailto:info@mindtreenursing.com">info@mindtreenursing.com</a> · 081/787, Olivet, Panavely, Kottarakkara, Kollam, Kerala 691532, India</p>
-                </article>
-            </div>
-        </main>
-
-        <footer>
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>MINDTREE NURSING SOLUTIONS</h3>
-                    <p>From documentation to registration, all in one place.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Social Media</h3>
-                    <ul class="social-icons">
-                        <li><a href="https://www.facebook.com/MindtreeNursingSolutions?mibextid=ZbWKwL" target="_blank"><img src="/images/otherimages/fbicon.svg" alt="Facebook icon"></a></li>
-                        <li><a href="https://www.instagram.com/mindtreenursingsolutions/?hl=en" target="_blank"><img src="/images/otherimages/instaicon.svg" alt="Instagram icon"></a></li>
-                        <li><a href="https://www.youtube.com/@mindtreenursingsolutions5958" target="_blank"><img src="/images/otherimages/yticon.svg" alt="YouTube icon"></a></li>
-                        <li><a href="https://www.linkedin.com/@mindtreenursingsolutions" target="_blank"><img src="/images/linked-in.svg" alt="LinkedIn icon"></a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>For Enquiries</h3>
-                    <ul>
-                        <li><a href="mailto:info@mindtreenursing.com"><img src="/images/otherimages/gmail.svg" alt="Email icon"> info@mindtreenursing.com</a></li>
-                        <li><a href="tel:+64212178770"><img src="/images/alternate-phone.svg" alt="Phone icon"> +64212178770</a></li>
-                        <li><a href="tel:+919778286707"><img src="/images/alternate-phone.svg" alt="Phone icon"> +919778286707</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <nav>
-                        <ul>
-                            <li><a href="/#home">Home</a></li>
-                            <li><a href="/#courses">Courses</a></li>
-                            <li><a href="/#services">Services</a></li>
-                            <li><a href="/about-us.html">Company</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="copyright">
-                <ul class="legal-links">
-                    <li><a href="support.html">Help &amp; Support</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Use</a></li>
-                </ul>
-                <p>&copy; 2026 Mindtree Nursing Solutions. All rights reserved.</p>
-            </div>
-        </footer>
-
-        <a href="https://wa.me/+919778286707" class="whatsapp-icon" target="_blank" aria-label="Chat with us on WhatsApp">
-            <img src="/images/whatsapp-icon.png" alt="WhatsApp icon">
-        </a>
-
-        <!-- Empty placeholder: script.js opens #christmasPopup on load. It is hidden by css/legal.css
-             so no offer ever appears on these pages (required for App Store review). -->
-        <div id="christmasPopup" class="popup-overlay" aria-hidden="true"></div>
-    </div>
-    <script src="/script.js"></script>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>&copy; 2026 Olivet Management Private Limited. All rights reserved.</span>
+    <nav aria-label="Footer"><a href="support.html">Help &amp; Support</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></nav>
+  </div>
+</footer>
 </body>
 </html>
