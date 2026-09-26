@@ -1,0 +1,250 @@
+/* ==========================================================
+   Mindtree Academy – Legal & Support pages
+   (privacy.html, terms.html, support.html)
+   Loads AFTER css/styles.css. Everything is scoped under
+   .legal-* classes so it never affects the rest of the site.
+   ========================================================== */
+
+:root {
+    --mt-blue: #2562bd;          /* footer blue            */
+    --mt-heading: rgb(42, 98, 153);
+    --mt-subtitle: rgb(82, 102, 181);
+    --mt-teal: #00c4cc;          /* EXPLORE MORE button    */
+    --mt-btn: rgb(61, 101, 162);
+    --mt-text: #333333;
+    --mt-muted: #5f6b7a;
+    --mt-border: #e3e8f4;
+    --mt-soft: #eef3fc;
+    --mt-card-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* The site-wide script opens #christmasPopup on load.
+   These pages keep an empty placeholder so the script doesn't
+   error, and hide it so no offer ever shows here. */
+#christmasPopup { display: none !important; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 130px; }
+
+.legal-hero,
+.legal-layout { font-family: Roboto, sans-serif; }
+
+/* ---------- Page hero ---------- */
+.legal-hero {
+    text-align: center;
+    padding: 3rem 1rem 1.5rem;
+    color: #000;
+}
+.legal-hero .legal-eyebrow {
+    display: inline-block;
+    background: var(--mt-teal);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+.legal-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: bold;
+    margin: 0 0 0.5rem;
+    color: #000;
+}
+.legal-hero .legal-updated {
+    font-size: 1.1rem;
+    color: var(--mt-subtitle);
+    margin: 0;
+}
+
+/* ---------- Layout: contents sidebar + card ---------- */
+.legal-layout {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem 4rem;
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+.legal-toc {
+    position: sticky;
+    top: 130px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: var(--mt-card-shadow);
+    padding: 1.25rem 1rem;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+}
+.legal-toc h2 {
+    font-size: 0.85rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--mt-muted) !important;
+    margin: 0 0 0.75rem !important;
+}
+.legal-toc ol { list-style: none; margin: 0; padding: 0; }
+.legal-toc li a {
+    display: block;
+    padding: 0.45rem 0.75rem;
+    border-left: 3px solid transparent;
+    border-radius: 0 5px 5px 0;
+    color: var(--mt-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.legal-toc li a:hover {
+    background: var(--mt-soft);
+    border-left-color: var(--mt-blue);
+    color: var(--mt-blue);
+}
+
+/* ---------- Content card ---------- */
+.legal-content {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: var(--mt-card-shadow);
+    padding: clamp(1.25rem, 4vw, 3rem);
+    color: var(--mt-text);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    min-width: 0;
+}
+.legal-content > :first-child { margin-top: 0; }
+.legal-content .legal-lead { font-size: 1.15rem; color: #222; }
+
+.legal-content h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--mt-heading);
+    margin: 2.5rem 0 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--mt-border);
+    text-align: left;
+}
+.legal-content h2:first-of-type { border-top: 0; padding-top: 0; margin-top: 1.5rem; }
+.legal-content h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 1.75rem 0 0.5rem;
+}
+.legal-content p { margin: 0 0 1rem; }
+.legal-content ul,
+.legal-content ol { margin: 0 0 1.1rem; padding-left: 1.4rem; }
+.legal-content li { margin: 0.4rem 0; }
+.legal-content li::marker { color: var(--mt-blue); font-weight: bold; }
+.legal-content a { color: var(--mt-blue); font-weight: 500; }
+.legal-content a:hover { color: var(--mt-heading); }
+
+/* Menu paths such as "Profile → Settings → Account" */
+.legal-content .path {
+    display: inline-block;
+    background: var(--mt-soft);
+    color: var(--mt-blue);
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+    border-left: 4px solid var(--mt-blue);
+    border-radius: 5px;
+}
+
+/* Unfilled text that must be completed before publishing */
+.legal-content mark.todo {
+    background: #fff3c4;
+    color: #6b4e00;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ---------- Table ---------- */
+.legal-table-wrap {
+    overflow-x: auto;
+    margin: 0.5rem 0 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--mt-border);
+}
+.legal-content table { width: 100%; min-width: 580px; border-collapse: collapse; font-size: 0.97rem; }
+.legal-content th,
+.legal-content td { text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--mt-border); vertical-align: top; }
+.legal-content th { background: var(--mt-blue); color: #fff; font-weight: 600; }
+.legal-content tr:nth-child(even) td { background: #f8faff; }
+.legal-content tr:last-child td { border-bottom: 0; }
+.legal-content td:first-child { font-weight: 600; color: var(--mt-heading); }
+
+/* ---------- Support page: contact cards ---------- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 0.5rem 0 1.25rem;
+}
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background: #fff;
+    border: 1px solid var(--mt-border);
+    border-top: 4px solid var(--mt-teal);
+    border-radius: 8px;
+    box-shadow: var(--mt-card-shadow);
+    padding: 1.2rem 1.25rem;
+    text-decoration: none;
+    color: var(--mt-text) !important;
+    transition: transform 0.3s ease;
+}
+.contact-card:hover { transform: translateY(-4px); }
+.contact-card .label { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mt-blue); }
+.contact-card .value { font-size: 1.15rem; font-weight: 700; color: #000; word-break: break-word; }
+.contact-card .hint { font-size: 0.92rem; color: var(--mt-muted); font-weight: 400; }
+
+/* ---------- Support page: FAQ cards ---------- */
+.faq-item {
+    background: #fff;
+    border: 1px solid var(--mt-border);
+    border-radius: 8px;
+    box-shadow: var(--mt-card-shadow);
+    padding: 1.1rem 1.35rem 0.4rem;
+    margin: 0 0 1rem;
+    transition: transform 0.3s ease;
+}
+.faq-item:hover { transform: translateY(-2px); }
+.faq-item h3 { margin: 0 0 0.5rem; color: var(--mt-heading); }
+
+/* ---------- Footer legal links ---------- */
+.legal-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+.legal-links a { color: #fff; text-decoration: none; opacity: 0.9; }
+.legal-links a:hover { opacity: 1; text-decoration: underline; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .legal-layout { grid-template-columns: minmax(0, 1fr); }
+    .legal-toc { position: static; max-height: none; }
+}
+@media (max-width: 768px) {
+    html { scroll-padding-top: 110px; }
+    .legal-hero { padding: 2rem 1rem 1rem; }
+    .legal-layout { padding: 0.5rem 1rem 3rem; gap: 1.25rem; }
+    .legal-content { font-size: 1rem; }
+    .legal-content h2 { font-size: 1.35rem; }
+}
+
+/* ---------- Print ---------- */
+@media print {
+    header, footer, .legal-toc, .whatsapp-icon { display: none !important; }
+    body { background: #fff !important; }
+    .legal-layout { display: block; padding: 0; }
+    .legal-content { box-shadow: none; padding: 0; }
+}
